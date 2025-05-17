@@ -1,0 +1,46 @@
+/* Add to previous styles */
+.image-card {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.image-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+}
+
+.image-card img {
+    height: 200px;
+    object-fit: cover;
+    width: 100%;
+}
+
+.image-actions {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0,0,0,0.7);
+    padding: 10px;
+    transform: translateY(100%);
+    transition: all 0.3s ease;
+}
+
+.image-card:hover .image-actions {
+    transform: translateY(0);
+}
+
+.loading-spinner {
+    width: 3rem;
+    height: 3rem;
+}
+
+/* Add responsive adjustments */
+@media (max-width: 768px) {
+    .image-card img {
+        height: 150px;
+    }
+}
