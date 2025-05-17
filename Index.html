@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!-- Same as previous index.html but with updated image display section -->
+    <!-- Add Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+</head>
+<body>
+    <!-- Same structure as before but with updated image grid -->
+    <div class="image-display">
+        <p id="placeholderText" class="text-muted">Your generated images will appear here</p>
+        <div id="imagesSection" class="hidden">
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4" id="imageContainer"></div>
+            
+            <!-- Daily Limit Indicator -->
+            <div class="alert alert-limit mt-4 hidden" id="limitAlert">
+                <i class="bi bi-exclamation-triangle-fill me-2"></i>
+                <span id="limitText">You've generated 0/30 images today</span>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Add loading spinner modal -->
+    <div class="modal fade" id="loadingModal" tabindex="-1" aria-hidden="true" data-bs-backdrop="static">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-body text-center py-5">
+                    <div class="spinner-border text-primary mb-3" style="width: 3rem; height: 3rem;" role="status">
+                        <span class="visually-hidden">Loading...</span>
+                    </div>
+                    <h5>Generating your images...</h5>
+                    <p class="text-muted">This may take a few moments</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>
